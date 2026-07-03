@@ -1,9 +1,8 @@
-import React from 'react'
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <footer style={{ padding: 24, borderTop: "1px solid #e8e8e8", marginTop: 24, opacity: 0.8 }}>
+      © {new Date().getFullYear()} CarBooking
+    </footer>
+  );
 }
 
-export default Footer;
