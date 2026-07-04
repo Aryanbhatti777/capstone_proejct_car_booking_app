@@ -1,4 +1,5 @@
-import axiosInstance from "../../../axiosInstance"
+import axiosInstance from "../../axiosInstance"
+
 
 export const createPaymentIntent = async (amount, bookingId) => {
     return await axiosInstance.post('/payment/create-payment-intent', {

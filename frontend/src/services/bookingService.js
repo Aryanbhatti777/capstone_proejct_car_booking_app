@@ -1,4 +1,5 @@
-import axiosInstance from "../../../axiosInstance"
+import axiosInstance from "../../axiosInstance"
+
 
 export const createBooking = async (carId, bookingData) => {
     return await axiosInstance.post(`/booking/book/${carId}`, bookingData)
