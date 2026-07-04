@@ -1,0 +1,144 @@
+/* Home Page Styles */
+.home-page {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin: 0 0 30px 0;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+    min-height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .features {
+    margin: 50px auto;
+  }
+
+  .features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .cta-section {
+    padding: 50px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+}

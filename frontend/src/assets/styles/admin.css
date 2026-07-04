@@ -1,0 +1,322 @@
+/* Admin Page Styles */
+.admin-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.admin-page h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+}
+
+.admin-tabs button {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.admin-tabs button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.admin-tabs button:hover:not(.active) {
+  color: #667eea;
+}
+
+.cars-section,
+.bookings-section {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-car-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+
+.add-car-btn:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+}
+
+.add-car-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.add-car-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-car-form.edit-car-form {
+  background: #f9f9f9;
+  border-left: 4px solid #28a745;
+}
+
+.add-car-form.edit-car-form h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 10px 0;
+  color: #28a745;
+}
+
+.add-car-form label {
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.add-car-form input,
+.add-car-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-car-form input:focus,
+.add-car-form select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.add-car-form .submit-btn {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.add-car-form .submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.form-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+}
+
+.form-buttons .submit-btn {
+  grid-column: auto;
+  flex: 1;
+  background: #28a745;
+  margin: 0;
+}
+
+.form-buttons .submit-btn:hover {
+  background: #218838;
+}
+
+.form-buttons .cancel-btn {
+  flex: 1;
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.form-buttons .cancel-btn:hover {
+  background: #5a6268;
+}
+
+.cars-list,
+.bookings-list {
+  display: grid;
+  gap: 20px;
+}
+
+.car-item,
+.booking-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-details,
+.booking-details {
+  flex-grow: 1;
+}
+
+.car-details h3,
+.booking-details h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.car-details p,
+.booking-details p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.car-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.complete-btn{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: #57df75;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.complete-btn:hover{
+  transform: scale(1.05);
+}
+
+.edit-btn {
+  background: #28a745;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+.status-booked {
+  background: #cce5ff;
+  color: #004085;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.status-completed {
+  background: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 20px 15px;
+  }
+
+  .car-item,
+  .booking-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .car-actions {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    flex: 1;
+  }
+
+  .add-car-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons .submit-btn,
+  .form-buttons .cancel-btn {
+    width: 100%;
+  }
+
+  .admin-tabs {
+    flex-wrap: wrap;
+  }
+}

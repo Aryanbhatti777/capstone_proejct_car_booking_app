@@ -1,0 +1,34 @@
+/* Cars Page Styles */
+.cars-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cars-page h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .cars-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .cars-page {
+    padding: 30px 15px;
+  }
+
+  .cars-page h1 {
+    font-size: 24px;
+  }
+}
