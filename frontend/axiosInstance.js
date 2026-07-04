@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const axiosInstance = axios.create({
-  baseURL: "http://capstoneproejctcarbookingapp-production.up.railway.app/api",
+  baseURL: "https://capstoneproejctcarbookingapp-production.up.railway.app/api",
   withCredentials: true,
 });
 
