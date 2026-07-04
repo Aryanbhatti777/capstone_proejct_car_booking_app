@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigin = [
-  "capstone-proejct-car-booking-app.vercel.app"
+  "https://capstone-proejct-car-booking-app.vercel.app"
 ];
 app.use(
   cors({
