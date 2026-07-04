@@ -13,6 +13,9 @@ const app = express();
 
 app.use(express.json());
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const allowedOrigin = [
   "https://capstone-proejct-car-booking-app.vercel.app"
 ];
@@ -30,6 +33,8 @@ app.use(
   })
 );
 
+app.use(express.static(path.join(__dirname, "dist")));
+
 app.use('/api/auth', authRouter)
 
 app.use('/api/car', CarRouter)
@@ -37,6 +42,12 @@ app.use('/api/car', CarRouter)
 app.use('/api/booking', BookingRouter)
 
 app.use('/api/payment', PaymentRouter)
+
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  // If using 'build' folder instead of 'dist', change above to:
+  // res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 connectToDB();
 
